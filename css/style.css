@@ -1,6 +1,7 @@
 /* GLOBAL */
 :root{
   --primary: #ea625c ;
+  --primary-hover: #c9514c ;
   --text-color: #333333;
 }
 html{
@@ -8,6 +9,15 @@ html{
   height: 100%;
   scroll-behavior: smooth;
 
+}
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+* :focus {
+  outline: 2px dashed var(--primary);
+  outline-offset: 3px;
 }
 
 *,
@@ -44,7 +54,7 @@ body{
 /* SITE HEADER */
 .site-header{
   padding-top: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .site-header-box-wrapper {
   display: flex;
@@ -110,16 +120,57 @@ body{
 }
 
 /* FREEDOM CALLS */
+.hero {
+  border-bottom: 2px solid #ddd;
+  padding-top: 120px;
+  padding-bottom: 185px;
+  background-image: url(../img/watches.jpg);
+  background-position: left calc(50% + 540px) bottom;
+  background-size: 587px 565px;
+  background-repeat: no-repeat;
+  margin-bottom: 70px;
+}
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+}
+.lead-cta-heading {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  color: #000000;
+}
+.lead-cta-text {
+  margin: 0;
+  width: 100%;
+  max-width: 450px;
+  padding-left: 40px;
+  border-left:  3px solid #888888;
+  color: #777777;
+  margin-bottom: 30px;
+}
+/* PRIMARY-BUTTON */
 
-.main-section-freedom-calls {
-}
-.freedom-calls-heading {
-}
-.freedom-calls-text {
-}
-.freedom-calls-img {
-}
-.primary-button {
-}
 .primary-button-link {
+  display: inline-block;
+  border: 0;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 39px;
+  color: #fff;
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.primary-button-link:hover{
+  background-color: var(--primary-hover);
+
+}
+.primary-button-link:active{
+  background-color: var(--primary-hover);
+  opacity: 0.6;
 }

@@ -10,11 +10,6 @@ html{
   scroll-behavior: smooth;
 
 }
-*{
-  margin:0;
-  padding: 0;
-  box-sizing:border-box;
-}
 * :focus {
   outline: 2px dashed var(--primary);
   outline-offset: 3px;
@@ -173,4 +168,86 @@ body{
 .primary-button-link:active{
   background-color: var(--primary-hover);
   opacity: 0.6;
+}
+
+
+/* FEATURES LIST BUTTON */
+
+.lined-link{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--primary);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.lined-link::before {
+  width: 40px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  content: "";
+  transition: width 0.3s ease;
+}
+
+.lined-link:hover::before{
+  width: 60px;
+}
+
+
+/* RITINA SCREEN */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero{
+    background-image: url(../img/watches@2x.jpg);
+  }
+}
+
+/* FEATURES LIST */
+.features {
+  margin-bottom: 70px;
+}
+.features-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+.features-item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.features-item {
+  max-width: 280px;
+}
+.features-item-heading {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+}
+.features-item-text {
+  margin-top: 0;
+  font-size: 15px;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+
+.devider{
+  width: 8px;
+  height: 8px;
+  border: 0;
+  margin: 0;
+  background-color: #ddd;
+  box-shadow: 16px 0 0 0 #ddd,
+  32px 0 0 0 #ddd;
 }

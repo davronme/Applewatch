@@ -125,9 +125,15 @@ body{
   background-repeat: no-repeat;
   margin-bottom: 70px;
 }
+
+/* LEAD CTA */
 .lead-cta {
   width: 100%;
   max-width: 490px;
+}
+
+.lead-cta--white .lead-cta-heading{
+  color: #fff;
 }
 .lead-cta-heading {
   margin: 0;
@@ -137,6 +143,12 @@ body{
   line-height: 120%;
   color: #000000;
 }
+
+.lead-cta--white .lead-cta-text{
+  color: #fff;
+  border-color: #fff;
+}
+
 .lead-cta-text {
   margin: 0;
   width: 100%;
@@ -200,17 +212,7 @@ body{
 
 /* RITINA SCREEN */
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-  .hero{
-    background-image: url(../img/watches@2x.jpg);
-  }
-}
+
 
 /* FEATURES LIST */
 .features {
@@ -250,4 +252,55 @@ only screen and (                min-resolution: 2dppx) {
   background-color: #ddd;
   box-shadow: 16px 0 0 0 #ddd,
   32px 0 0 0 #ddd;
+}
+
+
+/* SECOND HERO */
+
+.second-hero {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.second-hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-hero-img {
+  display: block;
+  width: 400px;
+  height: 600px;
+}
+
+/* THIRD HERO SECTION */
+
+.third-hero {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url(../img/runners.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.third-hero-lead-cta{
+  margin-left: auto;
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero{
+    background-image: url(../img/watches@2x.jpg);
+  }
+
+  .third-hero {
+    background-image: url(../img/runners@2x.jpg);
+  }
 }
